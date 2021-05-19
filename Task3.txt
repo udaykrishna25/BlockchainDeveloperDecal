@@ -1,0 +1,13 @@
+
+1. We use Web3 in App.js in componentDidMount. It is used to acquire the account and contract of a specific user. 
+Using web3 helps us in interacting with smart contract from a page as the web3 gets introduced into webpage 
+when we connect to the blockchain with metamask. json rpc is used for the interaction between web3 and blockchain.
+
+2. Lets understand what's going on in fetchLoot. We first create state variables as constants. Then, intializing 
+of state variable is set to True. This is to show that we are going to be working inside fetchLoot. After this,
+we call the totalSupply function in contract.methods to count the number of tokens. Then we create two new lists.
+One for available tokens, the other for stored ones. Then we use a for loop to loop through the total tokens.
+Inside the loop, we get the tokenId, token instance and owner using different functions inside contract.methods.
+We add another variable here (a dictinoary) called deciphered that consists of things like tokenId, token name,
+token picture, price, tag etc. After this, we use an if condition to check if the token is owned by the callled
+owner. If that is true, we add it to owned list otherwise to the available list. 
